@@ -1,0 +1,20 @@
+.example-wrapper {
+    display: grid;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 10px;
+    border: 2px solid black;
+    justify-content: left;
+    text-align: left;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.example-name {
+    color: white;
+    font-size: 22px;
+}
+
+.example-text {
+    color: white;
+}

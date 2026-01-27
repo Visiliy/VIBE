@@ -1,6 +1,7 @@
 import AuthorizationService from "../../../Servises/AuthorizationService";
 import "../UX/Authorization.css";
 import { useState, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Authorization = () => {
     const [isLogin, setIsLogin] = useState(true);
@@ -9,6 +10,7 @@ const Authorization = () => {
     const emailRef = useRef(null);
     const passwordRef = useRef(null);
     const usernameRef = useRef(null);
+    const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -102,6 +104,16 @@ const Authorization = () => {
                             {loading ? "Processing..." : (isLogin ? "Sign In" : "Sign Up")}
                         </button>
                     </form>
+                    <div className="auth-back-link">
+                        <button 
+                            type="button"
+                            onClick={() => navigate('/')}
+                            disabled={loading}
+                            className="auth-back-arrow"
+                        >
+                            ←
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>

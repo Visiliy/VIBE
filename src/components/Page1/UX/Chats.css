@@ -1,5 +1,6 @@
 .chats-wrapper {
     margin-left: 20px;
+    user-select: none;
 }
 
 .chats-wrapper button {
@@ -39,9 +40,14 @@
     background-repeat: no-repeat;
 }
 
+@media (max-width: 468px) {
+    .chats-wrapper {
+        width: 100%;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
 
-.chats-container p {
-    color: #e6b421;
-    margin-top: 10px;
-    font-size: 24px;
+    .chats-wrapper button {
+        padding: 8px 20px;
+    }
 }

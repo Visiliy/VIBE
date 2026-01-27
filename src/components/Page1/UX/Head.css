@@ -47,3 +47,19 @@
     transform: scale(0.95);
 
 }
+
+@media (max-width: 468px) {
+    .logo-div img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .head-wrapper p {
+        font-size: 40px;
+        margin-left: -10px;
+    }
+
+    .head-wrapper button {
+        margin-right: 0;
+    }
+}

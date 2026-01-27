@@ -15,7 +15,7 @@ class AuthorizationService {
 
             const data = await response.json();
 
-            if (!response.ok || !data.success) {
+            if (!response.ok) {
                 throw new Error(data.message || 'Login failed');
             }
 
@@ -37,7 +37,7 @@ class AuthorizationService {
 
             const data = await response.json();
 
-            if (!response.ok || !data.success) {
+            if (!response.ok) {
                 throw new Error(data.message || 'Registration failed');
             }
 
