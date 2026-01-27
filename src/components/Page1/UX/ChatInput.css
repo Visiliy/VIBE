@@ -1,0 +1,58 @@
+.chat-input-wrapper {
+   transform: translateX(50%);
+   padding: 15px;
+   border-radius: 30px;
+   background-color: #333;
+   border: 1px solid #e6b421;
+   width: 50%;
+   display: grid;
+}
+
+.chat-input-wrapper textarea {
+    width: 100%;
+    outline: none;
+    overflow: hidden;
+    resize: none;
+    font-family: monospace;
+    font-size: 16px;
+    border: none;
+    background-color: #333;
+    color: #e6b421;
+}
+
+.files-btn {
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: transparent;
+    color: #e6b421;
+    font-size: 20px;
+    transition: 0.5S ease;
+}
+
+.files-btn:hover {
+    cursor: pointer;
+    background-color: #e6b421;
+    color: #333;
+}
+
+.send-btn {
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    background: #e6b421;
+    color: #333;
+    font-size: 20px;
+    transition: 0.5S ease;
+}
+
+.send-btn:hover {
+    cursor: pointer;
+    transform: scale(0.95);
+}
+
+.chat-input-wrapper textarea::placeholder {
+    color: #e6b421;
+}
