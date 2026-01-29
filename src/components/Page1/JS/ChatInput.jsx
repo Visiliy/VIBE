@@ -1,9 +1,8 @@
 import Cookies from "../../../Servises/Cookies";
-import ServerClient from "../../../Servises/ServerClient";
 import "../UX/ChatInput.css";
 import { useRef, useCallback, useEffect, useState } from "react";
 
-const ChatInput = ({ jwtToken, isFirstVisit, dataCloud }) => {
+const ChatInput = ({ jwtToken, isFirstVisit, isReg, dataCloud }) => {
     const textareaRef = useRef(null);
     const fileInputRef = useRef(null);
     const maxHeight = 200;
@@ -88,6 +87,9 @@ const ChatInput = ({ jwtToken, isFirstVisit, dataCloud }) => {
             const registerResult = await client.postRequest('/register', registerData);
             
             if (registerResult.message.jwtToken) {
+                cookies.set('JWT', registerResult.message.jwtToken, 1);
+                cookies.set('firstVisit', 'true', 1);
+                
                 const generateData = {
                     jwtToken: registerResult.message.jwtToken,
                     message,
@@ -99,9 +101,6 @@ const ChatInput = ({ jwtToken, isFirstVisit, dataCloud }) => {
                 };
                 const generateResponse = await client.postRequest('/model_generate', generateData);
                 modelResponse = generateResponse.message;
-                
-                cookies.set('JWT', registerResult.message.jwtToken);
-                cookies.set('firstVisit', 'true');
             } else {
                 modelResponse = registerResult.message;
             }
