@@ -2,7 +2,7 @@
     display: grid;
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.9);
-    border-radius: 10px;
+    border-radius: 15px;
     border: 2px solid black;
     justify-content: left;
     text-align: left;
@@ -17,4 +17,10 @@
 
 .example-text {
     color: white;
+}
+
+@media (max-width: 468px) {
+    .example-wrapper {
+        margin: 5px;
+    }
 }

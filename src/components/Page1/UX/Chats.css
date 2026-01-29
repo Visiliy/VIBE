@@ -43,11 +43,15 @@
 @media (max-width: 468px) {
     .chats-wrapper {
         width: 100%;
-        margin-right: 10px;
-        margin-left: 10px;
+        margin-right: 0;
+        margin-left: 0;
     }
 
     .chats-wrapper button {
         padding: 8px 20px;
+    }
+
+    .chats-container {
+        height: calc(100vh - 100px);
     }
 }

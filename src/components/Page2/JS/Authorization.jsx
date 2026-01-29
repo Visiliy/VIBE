@@ -44,7 +44,6 @@ const Authorization = () => {
         <div className="auth-main-wrapper">
             <div className="auth-authorization-wrapper">
                 <div className="auth-container">
-                    <h1 className="auth-title">{isLogin ? "Welcome" : "Create Account"}</h1>
                     <div className="auth-tabs">
                         <button 
                             className={`auth-tab ${isLogin ? 'active' : ''}`} 

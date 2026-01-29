@@ -5,6 +5,7 @@
 
 .main-chat-window {
     flex: 1;
+    display: none;
     align-items: center;
     margin: auto;
 }
@@ -28,6 +29,64 @@
     border: none;
     border-radius: 50%;
     cursor: pointer;
+}
+
+.write-btn {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: #e6b421;
+    border-radius: 50%;
+    font-size: 25px;
+    cursor: pointer;
+    bottom: 40px;
+    right: 40px;
+    transition: 0.5s ease;
+}
+
+.options-wrapper {
+    position: absolute;
+    background: url("src/assets/-mRBnX3c22x54nzjCrlfL.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    border: #e6b421 1px solid;
+    bottom: 40px;
+    user-select: none;
+    right: 40px;
+    padding: 20px 40px;
+}
+
+.options-wrapper p {
+    font-size: 20px;
+    padding: 10px;
+    background-color: black;
+    border-radius: 10px;
+    color: #e6b421;
+    cursor: pointer;
+    margin: 5px;
+    transition: 0.5s ease;
+}
+
+.options-wrapper p:hover {
+    transform: scale(1.1);
+}
+
+.close-btn {
+    color: #e6b421;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    background-color: transparent;
+    font-size: 25px;
+    cursor: pointer;
+    border: none;
+}
+
+.write-btn:hover {
+    transform: scale(1.1);
 }
 
 @media (max-width: 768px) {

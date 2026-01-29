@@ -1,9 +1,11 @@
 import { useState } from "react";
 import Example from "../JS/Example";
+import { useMediaQuery } from 'react-responsive';
 import "../UX/Chats.css";
 
 const Chats = () => {
     const [activeTab, setActiveTab] = useState('chats');
+    const isMobile = useMediaQuery({ maxWidth: 468 });
     
     const chatsData = [
         { name: "Иван Петров", text: "Обсуждение проекта React..." },
@@ -44,24 +46,28 @@ const Chats = () => {
 
     return (
         <div className="chats-wrapper">
-            <button 
-                className={activeTab === 'chats' ? 'active' : ''}
-                onClick={() => setActiveTab('chats')}
-            >
-                Chats
-            </button>
-            <button 
-                className={activeTab === 'ai' ? 'active' : ''}
-                onClick={() => setActiveTab('ai')}
-            >
-                AI Chats
-            </button>
-            <button 
-                className={activeTab === 'storage' ? 'active' : ''}
-                onClick={() => setActiveTab('storage')}
-            >
-                Storage
-            </button>
+            {
+                !isMobile && <>
+                    <button 
+                        className={activeTab === 'chats' ? 'active' : ''}
+                        onClick={() => setActiveTab('chats')}
+                    >
+                        Chats
+                    </button>
+                    <button 
+                        className={activeTab === 'ai' ? 'active' : ''}
+                        onClick={() => setActiveTab('ai')}
+                    >
+                        AI Chats
+                    </button>
+                    <button 
+                        className={activeTab === 'storage' ? 'active' : ''}
+                        onClick={() => setActiveTab('storage')}
+                    >
+                        Storage
+                    </button>
+                </>
+            }
             <div className="chats-container">
                 {renderContent()}
             </div>

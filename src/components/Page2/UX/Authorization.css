@@ -10,13 +10,13 @@
 .auth-authorization-wrapper {
     width: 100%;
     max-width: 420px;
-    background: rgba(20, 20, 20, 0.95);
+    background: url("src/assets/4FSbgHKLubBNbDujRr_CZ.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     backdrop-filter: blur(20px);
-    border: 1px solid rgba(230, 180, 33, 0.2);
+    border: 1px solid #1a1a1a;
     border-radius: 24px;
-    box-shadow: 
-        0 20px 40px rgba(0, 0, 0, 0.6),
-        0 0 0 1px rgba(230, 180, 33, 0.1);
     overflow: hidden;
     position: relative;
 }
@@ -25,22 +25,11 @@
     padding: 48px 32px 120px 32px;
 }
 
-.auth-title {
-    font-size: 32px;
-    font-weight: 800;
-    background: linear-gradient(135deg, #e6b421 0%, #ffcd5e 50%, #e6b421 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-align: center;
-    margin-bottom: 36px;
-    letter-spacing: -0.02em;
-}
-
 .auth-tabs {
     display: flex;
     border-radius: 16px;
     padding: 4px;
+    gap: 10px;
     margin-bottom: 40px;
 }
 
@@ -53,20 +42,21 @@
     font-size: 15px;
     font-weight: 600;
     border-radius: 12px;
+    border: 2px solid black;
     cursor: pointer;
     transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     backdrop-filter: blur(10px);
 }
 
 .auth-tab:hover {
-    color: #e6b421;
-    background: rgba(230, 180, 33, 0.2);
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .auth-tab.active {
-    background: linear-gradient(135deg, #e6b421 0%, #ffcd5e 100%);
-    color: #1a1a1a;
-    box-shadow: 0 8px 25px rgba(230, 180, 33, 0.4);
+    background: linear-gradient(135deg, #1a1a1a 0%, #333333 100%);
+    color: #ffffff;
+    box-shadow: 0 8px 25px rgba(26, 26, 26, 0.6);
 }
 
 .auth-form {
@@ -85,12 +75,13 @@ input[type="password"] {
     width: 100%;
     padding: 20px 24px;
     background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(230, 180, 33, 0.2);
+    border: 1px solid rgba(26, 26, 26, 0.3);
     border-radius: 16px;
-    color: white;
+    color: black;
     font-size: 16px;
     font-weight: 500;
     outline: none;
+    border: 2px solid black;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     backdrop-filter: blur(10px);
 }
@@ -98,17 +89,17 @@ input[type="password"] {
 input[type="text"]::placeholder,
 input[type="email"]::placeholder,
 input[type="password"]::placeholder {
-    color: rgba(255, 255, 255, 0.4);
+    color: black;
 }
 
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="password"]:focus {
-    border-color: #e6b421;
-    background: rgba(230, 180, 33, 0.1);
+    border-color: #1a1a1a;
+    background: rgba(26, 26, 26, 0.2);
     box-shadow: 
-        0 0 0 4px rgba(230, 180, 33, 0.15),
-        0 4px 20px rgba(0, 0, 0, 0.2);
+        0 0 0 4px rgba(26, 26, 26, 0.2),
+        0 4px 20px rgba(0, 0, 0, 0.3);
     transform: translateY(-1px);
 }
 
@@ -127,10 +118,10 @@ input[type="password"]:focus {
 .auth-submit-btn {
     width: 100%;
     padding: 20px;
-    background: linear-gradient(135deg, #e6b421 0%, #ffcd5e 100%);
+    background: linear-gradient(135deg, #1a1a1a 0%, #333333 100%);
     border: none;
     border-radius: 16px;
-    color: #1a1a1a;
+    color: #ffffff;
     font-size: 16px;
     font-weight: 700;
     cursor: pointer;
@@ -140,7 +131,7 @@ input[type="password"]:focus {
     letter-spacing: 0.5px;
     position: relative;
     overflow: hidden;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
 }
 
 .auth-submit-btn::before {
@@ -150,7 +141,7 @@ input[type="password"]:focus {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
     transition: left 0.5s;
 }
 
@@ -161,8 +152,8 @@ input[type="password"]:focus {
 .auth-submit-btn:hover:not(:disabled) {
     transform: translateY(-2px);
     box-shadow: 
-        0 15px 35px rgba(230, 180, 33, 0.5),
-        0 5px 15px rgba(0, 0, 0, 0.3);
+        0 15px 35px rgba(26, 26, 26, 0.6),
+        0 5px 15px rgba(0, 0, 0, 0.4);
 }
 
 .auth-submit-btn:active {
@@ -188,9 +179,9 @@ input[type="password"]:focus {
 .auth-back-arrow {
     background: rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(230, 180, 33, 0.2);
+    border: 2px solid black;
     border-radius: 16px;
-    color: rgba(255, 255, 255, 0.6);
+    color: black;
     cursor: pointer;
     font-size: 20px;
     font-weight: 600;
@@ -217,13 +208,13 @@ input[type="password"]:focus {
 }
 
 .auth-back-arrow:hover:not(:disabled) {
-    color: #e6b421;
-    border-color: #e6b421;
-    background: rgba(230, 180, 33, 0.15);
+    color: #000;
+    border-color: #1a1a1a;
+    background: rgba(26, 26, 26, 0.2);
     transform: translateY(-1px);
     box-shadow: 
-        0 8px 25px rgba(230, 180, 33, 0.2),
-        0 4px 12px rgba(0, 0, 0, 0.2);
+        0 8px 25px rgba(26, 26, 26, 0.3),
+        0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .auth-back-arrow:hover:not(:disabled)::before {

@@ -49,6 +49,11 @@
 }
 
 @media (max-width: 468px) {
+
+    .head-wrapper {
+        height: 90px;
+    }
+
     .logo-div img {
         width: 100px;
         height: 100px;

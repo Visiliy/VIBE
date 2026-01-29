@@ -1,0 +1,97 @@
+.create-user-form {
+    flex: 1;
+    align-items: center;
+    margin: auto;
+}
+
+.user-form {
+    background: url("src/assets/AwJ162WCxNZQZiXHCaWpx.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    border: 1px solid #e6b421;
+    user-select: none;
+    display: grid;
+    padding: 20px;
+    gap: 16px;
+    width: fit-content;
+    justify-content: center;
+    text-align: center;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.user-name-input-div {
+    display: flex;
+    gap: 5px;
+}
+
+.users {
+    max-height: 200px;
+    overflow: auto;
+    justify-content: left;
+    text-align: left;
+}
+
+.user {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    color: black;
+    font-size: 16px;
+    padding: 5px;
+    font-weight: 500;
+    border: 2px solid black;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(10px);
+    justify-content: left;
+    display: flex;
+    gap: 10px;
+    width: fit-content;
+}
+
+.user p {
+    padding: 5px;
+}
+
+.time {
+    background-color: black;
+    border-radius: 10px;
+    color: white;
+}
+
+.users::-webkit-scrollbar {
+    display: none;
+}
+
+.user-form input {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    color: black;
+    font-size: 20px;
+    padding: 5px;
+    font-weight: 500;
+    outline: none;
+    border: 2px solid black;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(10px);
+}
+
+.user-form input::placeholder {
+    color: black;
+}
+
+.user-form button {
+    background-color: #1a1a1a;
+    padding: 18px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    transition: 0.5s ease;
+}
+
+.user-form button:hover {
+    transform: scale(0.95);
+}
