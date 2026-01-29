@@ -1,5 +1,6 @@
 .create-user-form {
     flex: 1;
+    display: none;
     align-items: center;
     margin: auto;
 }

@@ -1,9 +1,8 @@
-import AuthorizationService from "../../../Servises/AuthorizationService";
 import "../UX/Authorization.css";
 import { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
-const Authorization = () => {
+const Authorization = ({  }) => {
     const [isLogin, setIsLogin] = useState(true);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState("");

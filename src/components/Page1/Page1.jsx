@@ -6,7 +6,7 @@ import { useMediaQuery } from 'react-responsive';
 import { useState } from 'react';
 import CreateUserForm from "./JS/CreateUserForm";
 
-const Page1 = ({ dataCloud }) => {
+const Page1 = ({ dataCloud, firstVisit, jwt }) => {
     const isMobile = useMediaQuery({ maxWidth: 1024 });
     const [showOptions, setShowOptions] = useState(false);
 
@@ -34,7 +34,7 @@ const Page1 = ({ dataCloud }) => {
                         )}
                         <div className="main-chat-window">
                             <p>Stay informed, be on VIBE</p>
-                            <ChatInput />
+                            <ChatInput jwtToken={jwt} isFirstVisit={firstVisit} dataCloud={dataCloud}/>
                         </div>
                         <CreateUserForm />
                     </>
